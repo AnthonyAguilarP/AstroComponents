@@ -1,0 +1,70 @@
+---
+import logo from '../../assets/astro.svg';
+import Button1 from '../Button/Button.astro';
+---
+
+<header>
+    <div class="content">
+        <img src={logo.src} alt="Logo" />
+        <h1>Welcome to Our Website</h1>
+        <p>Your journey to excellence starts here.</p>
+        <Button1
+        text="Get Started" 
+        href="/prueba"
+        class="heroButton" />
+    </div>
+</header>
+
+<style>
+  header {
+    position: relative;
+    width: 100%;
+    background-image: url('/image1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    margin-left: 10vw;
+  }
+  
+  img {
+    height: 5vh;
+    margin-bottom: 2vh;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 5vh;
+    margin-bottom: 2vh;
+    width: 40vw;
+  }
+  
+  p {
+    color: white;
+    font-size: 2vh;
+    margin-bottom: 4vh;
+    width: 50vw;
+  }
+
+  .heroButton {
+    padding: 1vh 2vh;
+    font-size: 2vh;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 0.5vh;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  }
+  .heroButton:hover {
+    background-color: #e65c00;
+  }
+</style>

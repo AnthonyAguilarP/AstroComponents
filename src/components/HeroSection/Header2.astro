@@ -1,0 +1,92 @@
+---
+import logo from '../../assets/astro.svg';
+import Button1 from '../Button/Button.astro';
+import backgroundImage from '../../assets/image1.webp';
+---
+
+<header class="flex y-center">
+    <div class="w50vw">
+        <div class="m6vw">
+            <h1>Welcome to Our Website</h1>
+            <p>Your journey to excellence starts here.</p>
+            <div class="flex">
+            <Button1
+            text="Get Started" 
+            href="/prueba"
+            class="heroButton" />
+
+            <Button1
+            text="Get Started" 
+            href="/prueba"
+            class="heroSecondButton" />
+
+            </div>
+
+        </div>
+    </div>
+    <div class="w50vw">
+        <img src={backgroundImage.src} alt="Background Image" class="m6vw" />
+    </div>
+
+</header>
+
+<style>
+    header {
+        width: 100vw;
+    }
+    .flex {
+        display: flex;
+    }
+    .y-center {
+        align-items: center;
+    }
+    .w50vw {
+        width: 50vw;
+    }
+    img {
+        width: 38vw;
+        height: auto;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    .m6vw {
+        margin: 6vw;
+    }
+    h1 {
+        font-size: 5vh;
+        margin-bottom: 2vh;
+        width: 38vw;
+    }
+    p {
+        font-size: 2vh;
+        margin-bottom: 4vh;
+        width: 38vw;
+    }
+    .heroButton {
+        padding: 1vh 2vh;
+        font-size: 2vh;
+        background-color: #ff6600;
+        color: white;
+        border: none;
+        border-radius: 0.5vh;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    .heroButton:hover {
+        background-color: #e65c00;
+    }
+    .heroSecondButton {
+        padding: 1vh 2vh;
+        font-size: 2vh;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        border-radius: 0.5vh;
+        border: 2px solid #000000;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        margin-left: 2vw;
+    }
+    .heroSecondButton:hover {
+        background-color: #d1d1d1;
+    }
+</style>

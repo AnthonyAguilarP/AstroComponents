@@ -1,0 +1,50 @@
+---
+export interface Props {
+  href?: string;
+  sectionId?: string;
+  text?: string;
+  disabled?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+}
+
+const {
+  href,
+  sectionId,
+  text = 'Comenzar',
+  disabled = false,
+  type = 'button',
+  ...attrs
+} = Astro.props as Props & Record<string, any>;
+
+const isLink = Boolean(href || sectionId);
+const url = href ?? (sectionId ? `#${sectionId}` : undefined);
+const baseClass = 'btn';
+const classes = [
+  baseClass,`${baseClass}--block`,
+  attrs.class || ''
+].filter(Boolean).join(' ');
+---
+
+{isLink ? (
+  <a
+    href={disabled ? undefined : url}
+    class={classes}
+    aria-disabled={disabled ? 'true' : undefined}
+    tabindex={disabled ? -1 : undefined}
+    {...attrs}
+  >
+    <slot>{text}</slot>
+  </a>
+) : (
+  <button type={type} class={classes} disabled={disabled} {...attrs}>
+    <slot>{text}</slot>
+  </button>
+)}
+
+<style>
+
+  :where(a.btn) {
+    text-decoration: none;
+  }
+
+</style>
