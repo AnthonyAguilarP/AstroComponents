@@ -10,24 +10,21 @@ import backgroundImage from '../../assets/image1.webp';
             <h1>Welcome to Our Website</h1>
             <p>Your journey to excellence starts here.</p>
             <div class="flex">
-            <Button1
-            text="Get Started" 
-            href="/prueba"
-            class="heroButton" />
+                <Button1
+                    text="Get Started" 
+                    href="/prueba"
+                    class="heroButton" />
 
-            <Button1
-            text="Get Started" 
-            href="/prueba"
-            class="heroSecondButton" />
-
+                <Button1
+                    text="Learn More" 
+                    href="/prueba"
+                    class="heroSecondButton" />
             </div>
-
         </div>
     </div>
-    <div class="w50vw">
+    <div class="w50vw responsive-hide">
         <img src={backgroundImage.src} alt="Background Image" class="m6vw" />
     </div>
-
 </header>
 
 <style>
@@ -56,11 +53,13 @@ import backgroundImage from '../../assets/image1.webp';
         font-size: 5vh;
         margin-bottom: 2vh;
         width: 38vw;
+        text-align: left;
     }
     p {
         font-size: 2vh;
         margin-bottom: 4vh;
         width: 38vw;
+        text-align: left;
     }
     .heroButton {
         padding: 1vh 2vh;
@@ -84,9 +83,90 @@ import backgroundImage from '../../assets/image1.webp';
         border: 2px solid #000000;
         cursor: pointer;
         box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        margin-left: 2vw;
+        margin-left: 1vw;
     }
     .heroSecondButton:hover {
         background-color: #d1d1d1;
     }
+
+@media (orientation: portrait) {
+    h1, p {
+        width: 80vw;
+        margin-left: 10vw;
+        text-align: left;
+        color: #ffffff;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: stretch;
+        position: relative;
+    }
+
+    header > .w50vw:first-child {
+        width: 100vw;
+        position: relative;
+        z-index: 3;
+    }
+
+    header > .w50vw.responsive-hide {
+        position: absolute;
+        inset: 0;
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        pointer-events: none;
+        z-index: 0;
+        display: block;
+    }
+
+    header > .w50vw.responsive-hide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right center;
+        border-radius: 0;
+        display: block;
+    }
+
+    header::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+        z-index: 1;
+        pointer-events: none;
+    }
+
+
+    header > .w50vw:first-child .m6vw {
+        position: relative;
+        z-index: 4;
+    }
+
+    header > .w50vw:first-child .flex {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2vw;
+        margin-top: 3vh;
+        flex-wrap: wrap;
+        margin-left: 10vw;
+        margin-bottom: 5vh;
+    }
+
+    .heroButton,
+    .heroSecondButton {
+        width: auto;
+        min-width: unset;
+        font-size: 2vh;
+        padding: 1vh 1vh;
+        border-radius: 0.6vh;
+    }
+
+    .m6vw {
+        margin: 0;
+    }
+}
 </style>
