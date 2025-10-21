@@ -2,11 +2,27 @@
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/HeroSection/Header2.astro';
+import Header1 from '../components/HeroSection/Header1.astro';
+import Header3 from '../components/HeroSection/Header3.astro';
+import NavBar from '../components/NavBar/NavBar1.astro';
 
+import Logo from '../assets/astro.svg';
+const myLinks = [
+  { text: 'Home', href: '/' },
+  { text: 'Blog', href: '/blog' },
+  { text: 'Contacto', href: '/contact' }
+];
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
+	<Header3 
+		animation='slide-left'
+	/>
+	<NavBar
+	logo={Logo.src} links={myLinks} overlayMobile={true}
+	/>
 	<Header />
+	<Header1 />
 </Layout>

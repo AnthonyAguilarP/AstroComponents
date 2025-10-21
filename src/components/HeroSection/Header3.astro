@@ -1,0 +1,85 @@
+---
+import ScrollAnimator from '../animation/ScrollAnimator.astro';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  animation?: 'slide-up'|'slide-left'|'fade'|'scale'|'blur'|'rotate';
+  scrollMode?: 'follow'|'threshold';
+  scrollRange?: number;
+}
+
+const {
+  title = 'Welcome to Our Platform',
+  subtitle = 'Your journey to excellence starts here.',
+  animation = 'slide-up',
+  scrollMode = 'follow',
+  scrollRange = 190,
+} = Astro.props;
+---
+<header id="header3" class="hero-header" aria-hidden="false" data-animation={animation}>
+  <div class="container">
+    <h1>{title}</h1>
+    <p>{subtitle}</p>
+  </div>
+</header>
+<div class="spacer"></div>
+
+<style>
+    .spacer {
+        height: 35vh;
+    }
+  .hero-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/image1.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .container {
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    text-shadow: 0 8px 24px rgba(0,0,0,0.45);
+  }
+  
+  h1 {
+    font-size: 6vh;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 2.2vh;
+    margin: 0.6rem 0 0;
+  }
+
+  @media (orientation: portrait) {
+    .hero-header {
+      background-position: 65% center;
+    }
+    
+    .container {
+      padding: 1.5rem;
+      max-width: 90vw;
+    }
+    
+    h1 {
+      font-size: 5vh;
+    }
+    
+    p {
+      font-size: 2vh;
+    }
+  }
+</style>
+
+<ScrollAnimator target="#header3" animation={animation} mode={scrollMode} range={scrollRange} />
