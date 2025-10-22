@@ -1,10 +1,7 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/HeroSection/Header2.astro';
-import Header1 from '../components/HeroSection/Header1.astro';
-import Header3 from '../components/HeroSection/Header3.astro';
-import NavBar from '../components/NavBar/NavBar1.astro';
+import NavBar from '../components/NavBar/NavBar2.astro';
+import Header4 from '../components/HeroSection/Header4.astro';
 
 import Logo from '../assets/astro.svg';
 const myLinks = [
@@ -17,12 +14,6 @@ const myLinks = [
 ---
 
 <Layout>
-	<Header3 
-		animation='slide-left'
-	/>
-	<NavBar
-	logo={Logo.src} links={myLinks} overlayMobile={true}
-	/>
-	<Header />
-	<Header1 />
+	<NavBar />
+	<Header4 />
 </Layout>
