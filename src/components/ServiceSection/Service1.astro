@@ -1,0 +1,120 @@
+---
+import lightgarden from '../../assets/lightgarden.png';
+import learnday from '../../assets/learnday.png';
+---
+
+<section class="flex">
+    <div class="content">
+        <div class="content flex">
+            <div class="a flex">
+                <h5>01</h5>
+                <img class="service-introduction" src={learnday.src} alt="learn day">
+            </div>
+            <div class="b">
+                <h3>At Your Service</h3>
+                <h4>Our work is your</h4>
+                <h5>
+                    Success, change, and growth.
+                </h5>
+            </div>
+        </div>
+
+        <div class="items flex">
+            <p class="service-item"><span class="dropcap">B</span>uild desktop and mobile applications, as well as static and dynamic websites, with full theming and customization.</p>
+            <p class="service-item"><span class="dropcap">R</span>ealization of applications, websites, and various creative assets such as special occasion letters, banners, brochures, and more.</p>
+        </div>
+        <div class="items flex">
+            <p class="service-item"><span class="dropcap">I</span>ntegration of skilled professionals for design and development tasks. Available for part-time, full-time, and freelance roles. Fully remote, yet open to offers.</p>
+            <p class="service-item"><span class="dropcap">G</span>overn deployment and maintenance of websites, including hosting administration and domain management.</p>
+        </div>
+        <div class="items flex">
+            <p class="service-item"><span class="dropcap">H</span>ear from us for more information about services, pricing, and additional details.</p>
+            <p class="service-item"><span class="dropcap">T</span>eaching resources and materials focused on self-improvement and skill development. We're here to guide you.</p>
+        </div>
+        
+    </div>
+    <div class="content">
+        <img class="service-image" src={lightgarden.src} alt="light garden" />
+    </div>
+    
+</section>
+<style>
+    .items {
+        width: 50vw;
+        justify-content: center;
+        margin-top: 3vh;
+    }
+    .service-item {
+        width: 12vw;
+        margin-right: 5vw;
+    }
+    .dropcap {
+        float: left;
+        font-size: 5vh;
+        line-height: 0.8;
+        font-weight: bold;
+        margin-right: 0.5vw;
+    }
+    h3 {
+        font-size: 3vh;
+        margin: 0;
+        color: #12151f;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+    h4 {
+        font-size: 2.7vh;
+        margin: 0;
+        color: #12151f;
+        margin-left: 2vw;
+    }
+    .service-introduction {
+        width: 12vw;
+        height: 20vh;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+    }
+    h5 {
+        width: 3vw;
+        font-size: 1.5vh;
+        text-align: center;
+    }
+    .b h5 {
+        width: 15vw;
+        margin-top: 4.5vh;
+        text-align: left;
+        margin-left: 2vw;
+        font-style: italic;
+        font-weight: normal;
+    }
+    .a {
+        width: 15vw;
+    }
+    .b {
+        width: 35vw;
+        padding-left: 2vw;
+    }
+    .flex {
+        display: flex;
+    }
+    section {
+        height: auto;
+        width: 100vw;
+        background-color: rgba(245, 245, 245, 0.116);
+    }
+
+    .content {
+        width: 50vw;
+    }
+
+    .service-image {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        background-repeat: no-repeat;
+        box-shadow: #12151f 0px 0px 10px;
+    }
+
+</style>

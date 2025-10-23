@@ -1,0 +1,88 @@
+---
+import png from '../../assets/logo.png';
+// https://paletasdecolores.com/paleta-de-colores-%e2%84%964698/
+---
+
+<nav>
+    <div class="ca">
+        <a href="#">Principal</a>
+    </div>
+    <div class="cb">
+        <a href="#">Blog</a>
+    </div>
+    <div class="cc">
+        <a href="#">Contacto</a>
+    </div>
+    <div class="center">
+        <img src={png.src} alt="Logo" />
+    </div>
+
+    <div class="cd">
+        <a href="#">Sobre Nosotros</a>
+    </div>
+    <div class="ce">
+        <a href="#">Servicios</a>
+    </div>
+</nav>
+
+<style>
+    a {
+        text-decoration: none;
+        color: #FC597F;
+        font-size: 3.5vh;
+        width: 16vw;
+        text-align: center;
+    }
+    nav {
+        display: flex;
+        position: fixed;
+        z-index: 10;
+    }
+    .ca, .cb, .cc, .cd, .ce {
+        display: flex;
+        width: 20vw;
+        justify-content: center;
+        align-items: center;
+        box-shadow: #12151f 0px 2px 4px, #12151f 0px 7px 13px -3px, #12151f 0px -3px 0px inset;
+    }
+    .ca {
+        background-color: #12151f;
+        height: 20vh;
+    }
+    .cb {
+        background-color: #1e1e2f;
+        height: 17vh;
+    }
+    .cc {
+        background-color: #2a2a3c;
+        height: 14vh;
+    }
+    .cd {
+        background-color: #363646;
+        height: 17vh;
+    }
+    .ce {
+        background-color: #424253;
+        height: 20vh;
+    }
+    nav .center {
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        z-index: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .center img {
+        width: 10vw;
+        height: auto;
+        object-fit: cover;
+        filter: drop-shadow(0 3px 8px rgb(0, 0, 0));
+
+
+    }
+
+</style>
