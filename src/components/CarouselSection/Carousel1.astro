@@ -2,6 +2,8 @@
 import img1 from '../../assets/postre1.png';
 import img2 from '../../assets/postre2.png';
 import img3 from '../../assets/postre3.png';
+import img4 from '../../assets/postre4.png';
+import img5 from '../../assets/postre5.png';
 ---
 
 <section>
@@ -15,10 +17,26 @@ import img3 from '../../assets/postre3.png';
         <img src={img3.src} alt="Imagen de carrusel" />
     </div>
     <div class="d">
-
+        <img src={img4.src} alt="Imagen de carrusel" />
     </div>
     <div class="e">
-<img src={img1.src} alt="Imagen de carrusel" />
+        <img src={img5.src} alt="Imagen de carrusel" />
+    </div>
+
+    <div class="a">
+        <img src={img1.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="b">
+        <img src={img2.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="c">
+        <img src={img3.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="d">
+        <img src={img4.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="e">
+        <img src={img5.src} alt="Imagen de carrusel" />
     </div>
 </section>
 
@@ -29,6 +47,8 @@ import img3 from '../../assets/postre3.png';
         background-color: #f0f0f0;
         display: flex;
         flex-wrap: nowrap;
+        width: calc(30vw * 10); 
+        animation: deslizar 60s linear infinite;
     }
     .a, .b, .c, .d, .e {
         flex: 0 0 30vw;
@@ -58,5 +78,13 @@ import img3 from '../../assets/postre3.png';
         height: 38vh;
         object-fit: cover;
         filter: drop-shadow(25px 20px 9px #00000082);
+    }
+    @keyframes deslizar {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-150vw);
+      }
     }
 </style>

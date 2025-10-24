@@ -1,0 +1,45 @@
+---
+import img1 from '../../assets/article.png';
+---
+
+<article>
+    <h1 class="a">PLA</h1>
+    <h1 class="b">CER</h1>
+    <img src={img1.src} alt="Article">
+</article>
+
+<style>
+    article {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #486C76;
+    }
+    h1 {
+        font-size: 20vw;
+        margin: 0;
+        transform: scaleY(2);
+    }
+    img {
+        position: absolute;
+        left: 42vw;
+        bottom: 25vh;
+        width: auto;
+        height: 50vh;
+        z-index: 2;
+        filter: drop-shadow(25px 20px 9px #ffffffa6);
+    }
+    .a {
+        z-index: 1;
+        color: #FCB7CE;
+        filter: drop-shadow(25px 20px 9px #000000a6);
+    }
+    .b {
+        z-index: 3;
+        color: #FDE8F3;
+        filter: drop-shadow(25px 20px 9px #000000a6);
+    }
+</style>
