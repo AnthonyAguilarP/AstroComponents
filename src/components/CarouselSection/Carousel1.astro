@@ -1,0 +1,62 @@
+---
+import img1 from '../../assets/postre1.png';
+import img2 from '../../assets/postre2.png';
+import img3 from '../../assets/postre3.png';
+---
+
+<section>
+    <div class="a">
+        <img src={img1.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="b">
+        <img src={img2.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="c">
+        <img src={img3.src} alt="Imagen de carrusel" />
+    </div>
+    <div class="d">
+
+    </div>
+    <div class="e">
+<img src={img1.src} alt="Imagen de carrusel" />
+    </div>
+</section>
+
+<style>
+    section {
+        width: 100vw;
+        height: 40vh;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .a, .b, .c, .d, .e {
+        flex: 0 0 30vw;
+        width: 30vw;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .a {
+        background-color: #FDE8F3;
+    }
+    .b {
+        background-color: #FCB7CE;
+    }
+    .c {
+        background-color: #FC597F;
+    }
+    .d {
+        background-color: #D0203D;
+    }
+    .e {
+        background-color: #486C76;
+    }
+    img {
+        width: auto;
+        height: 38vh;
+        object-fit: cover;
+        filter: drop-shadow(25px 20px 9px #00000082);
+    }
+</style>
